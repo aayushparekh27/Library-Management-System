@@ -1,0 +1,104 @@
+/* Body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1d1f20, #434343);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #ffffff;
+}
+
+/* Wrapper to align heading and card to the left */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 600px;
+    margin-left: 50px; /* Spacing from the left side */
+}
+
+/* Heading styling aligned to left */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Floating card with medium size and left alignment */
+.floating-card {
+    width: 100%; /* Aligns with the wrapper's width */
+    max-width: 500px;
+    padding: 25px;
+    background: rgba(50, 50, 50, 0.9);
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    animation: float 3s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+
+.floating-card:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+/* Floating animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Form styling */
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #dcdcdc;
+}
+
+input {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #999;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #333;
+    outline: none;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, transform 0.2s;
+}
+
+input:focus {
+    box-shadow: 0 0 10px rgba(80, 170, 180, 0.5);
+    transform: scale(1.02);
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #4a90e2, #50b8d4);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #3a80d2, #40a8c4);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
